@@ -3,11 +3,11 @@
 ## Install Cookiecutter-Data-science
 !pip install cookiecutter-data-science or ccds
 ## Define the Project Architecture
-Run ccds (cookiecutter-data-science)
+1. Run ccds (cookiecutter-data-science)
 You've downloaded C:\Users\user\.cookiecutters\cookiecutter-data-science before. Is it okay to delete and re-download it? [y/n] (y):y
-project_name (project_name): health insurance
-repo_name (health_insurance): health_insurance
-module_name (health_insurance): module_insurance
+2. project_name (project_name): health insurance
+3. repo_name (health_insurance): health_insurance
+4. module_name (health_insurance): module_insurance
 author_name (Your name (or your organization/company/team)): sundar
 description (A short description of the project.): Calculate the Health Insurance Premium
 python_version_number (3.10): 3.12
