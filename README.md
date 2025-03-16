@@ -55,7 +55,13 @@ You've downloaded C:\Users\user\.cookiecutters\cookiecutter-data-science before.
 
 # Step 2:
  1.  Create an Python Virtual Environment:
-       python -m venv .venv
- 2. Activte the Python Virtual Environment
-       . \.venv\Scripts\activate
+    
+          python -m venv .venv
+ 2. Activte the Python Virtual Environment:
+    
+           .\.venv\Scripts\activate
+ 3. Install the Required Libraries using requirements.txt:
+
+          pip install -r requirements.txt
+ 4. 
     
