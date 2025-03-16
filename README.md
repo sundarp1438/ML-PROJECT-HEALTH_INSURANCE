@@ -64,4 +64,7 @@
 
           pip install -r requirements.txt
   
-    
+
+# Step 3:
+
+1. Create an Params.yaml and dvc.yaml files
