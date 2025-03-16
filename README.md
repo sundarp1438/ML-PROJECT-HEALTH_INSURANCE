@@ -12,39 +12,39 @@ You've downloaded C:\Users\user\.cookiecutters\cookiecutter-data-science before.
 6. description (A short description of the project.): Calculate the Health Insurance Premium
 7. python_version_number (3.10): 3.12
 8. Select dataset_storage
-    1 - none
-    2 - azure
-    3 - s3
-    4 - gcs
-    Choose from [1/2/3/4] (1): 1
+        1 - none
+        2 - azure
+        3 - s3
+        4 - gcs
+    
 9. Select environment_manager
-    1 - virtualenv        
-    2 - conda
-    3 - pipenv
-    4 - none
-    Choose from [1/2/3/4] (1): 2
+        1 - virtualenv        
+        2 - conda
+        3 - pipenv
+        4 - none
+    
 10. Select dependency_file
-    1 - requirements.txt
-    2 - environment.yml
-    3 - Pipfile
-    Choose from [1/2/3] (1): 1
+        1 - requirements.txt
+        2 - environment.yml
+        3 - Pipfile
+    
 11. Select pydata_packages
-    1 - none
-    2 - basic
-    Choose from [1/2] (1): 2
+        1 - none
+        2 - basic
+    
 12. Select open_source_license
-    1 - No license file
-    2 - MIT
-    3 - BSD-3-Clause
-    Choose from [1/2/3] (1): 2
+        1 - No license file
+        2 - MIT
+        3 - BSD-3-Clause
+    
 13. Select docs
-    1 - mkdocs
-    2 - none
-    Choose from [1/2] (1): 1
+        1 - mkdocs
+        2 - none
+   
 14. Select include_code_scaffold
-    1 - Yes
-    2 - No
-    Choose from [1/2] (1): 1
+        1 - Yes
+        2 - No
+    
 
 # Step 2:
   Create an Python Virtual Environment
