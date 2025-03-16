@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1742139963218
+current_stage: None
+description: ''
+last_updated_timestamp: 1742139963218
+name: helath_isurance
+run_id: 207951f4c4f44461b310987491e2e14c
+run_link: ''
+source: file:///C:/Users/user/OneDrive%20-%20GTR%20TeK%20LLC/Desktop/MLOPS/health_insurance/health_insurance/mlruns/904035378589516459/207951f4c4f44461b310987491e2e14c/artifacts/insurance_model
+status: READY
+status_message: null
+storage_location: file:///C:/Users/user/OneDrive%20-%20GTR%20TeK%20LLC/Desktop/MLOPS/health_insurance/health_insurance/mlruns/904035378589516459/207951f4c4f44461b310987491e2e14c/artifacts/insurance_model
+user_id: null
+version: 1

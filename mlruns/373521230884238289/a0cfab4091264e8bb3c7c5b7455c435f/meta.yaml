@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/user/OneDrive%20-%20GTR%20TeK%20LLC/Desktop/MLOPS/health_insurance/health_insurance/mlruns/373521230884238289/a0cfab4091264e8bb3c7c5b7455c435f/artifacts
+end_time: 1742135599109
+entry_point_name: ''
+experiment_id: '373521230884238289'
+lifecycle_stage: active
+run_id: a0cfab4091264e8bb3c7c5b7455c435f
+run_name: upset-cow-926
+run_uuid: a0cfab4091264e8bb3c7c5b7455c435f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742135598796
+status: 3
+tags: []
+user_id: user

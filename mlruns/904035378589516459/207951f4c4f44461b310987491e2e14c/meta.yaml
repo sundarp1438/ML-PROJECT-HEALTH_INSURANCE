@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/user/OneDrive%20-%20GTR%20TeK%20LLC/Desktop/MLOPS/health_insurance/health_insurance/mlruns/904035378589516459/207951f4c4f44461b310987491e2e14c/artifacts
+end_time: 1742139887412
+entry_point_name: ''
+experiment_id: '904035378589516459'
+lifecycle_stage: active
+run_id: 207951f4c4f44461b310987491e2e14c
+run_name: marvelous-frog-765
+run_uuid: 207951f4c4f44461b310987491e2e14c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742139672385
+status: 3
+tags: []
+user_id: user

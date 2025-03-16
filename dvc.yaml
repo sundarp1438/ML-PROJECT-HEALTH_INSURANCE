@@ -1,0 +1,69 @@
+stages:
+
+  data_load:
+    cmd: python data_load.py --config=params.yaml
+    deps:
+    - src/stages/data_load.py
+    params:
+    - base
+    - data_load
+    outs:
+    - data/raw/insurance_data.csv
+
+  featurize:
+    cmd: python featurize.py --config=params.yaml
+    deps:
+    - data/raw/insurance_data.csv
+    - src/stages/featurize.py
+    params:
+    - base
+    - featurize
+    outs:
+    - data/processed/featured_insurance_data.csv
+
+  data_split:
+    cmd: python data_split.py --config=params.yaml
+    deps:
+    - data/processed/featured_insurance_data.csv
+    - src/stages/data_split.py
+    params:
+    - base
+    - data_split
+    outs:
+    - data/processed/train_insurance.csv
+    - data/processed/test_insurance.csv
+
+  train:
+    cmd: python train.py --config=params.yaml
+    deps:
+    - data/processed/train_insurance.csv
+    - src/stages/train.py
+    params:
+    - base
+    - train
+    outs:
+    - models/model.joblib
+
+  evaluate:
+    cmd: python evaluate.py --config=params.yaml
+    deps:
+    - data/processed/test_insurance.csv
+    - models/model.joblib
+    - src/stages/evaluate.py
+    params:
+    - base
+    - evaluate
+    outs:
+    - reports/metrics.json
+
+  data_drift:
+    cmd: python data_drift.py --config=params.yaml
+    deps:
+    - data/processed/train_insurance.csv
+    - data/processed/test_insurance.csv
+    - src/stages/data_drift.py
+    params:
+    - base
+    - evaluate.drift_report_path
+    outs:
+    - reports/data_drift.html

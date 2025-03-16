@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: insurance-api
+  namespace: mlops
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: insurance-api
+  template:
+    metadata:
+      labels:
+        app: insurance-api
+    spec:
+      containers:
+        - name: insurance-api
+          image: yourdockerhubusername/insurance-api:latest
+          ports:
+            - containerPort: 8000
+          env:
+            - name: ENVIRONMENT
+              value: "production"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: insurance-api-service
+  namespace: mlops
+spec:
+  selector:
+    app: insurance-api
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8000
+  type: LoadBalancer
