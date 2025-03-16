@@ -17,31 +17,31 @@ You've downloaded C:\Users\user\.cookiecutters\cookiecutter-data-science before.
     3 - s3
     4 - gcs
     Choose from [1/2/3/4] (1): 1
-Select environment_manager
+9. Select environment_manager
     1 - virtualenv        
     2 - conda
     3 - pipenv
     4 - none
     Choose from [1/2/3/4] (1): 2
-Select dependency_file
+10. Select dependency_file
     1 - requirements.txt
     2 - environment.yml
     3 - Pipfile
     Choose from [1/2/3] (1): 1
-Select pydata_packages
+11. Select pydata_packages
     1 - none
     2 - basic
     Choose from [1/2] (1): 2
-Select open_source_license
+12. Select open_source_license
     1 - No license file
     2 - MIT
     3 - BSD-3-Clause
     Choose from [1/2/3] (1): 2
-Select docs
+13. Select docs
     1 - mkdocs
     2 - none
     Choose from [1/2] (1): 1
-Select include_code_scaffold
+14. Select include_code_scaffold
     1 - Yes
     2 - No
     Choose from [1/2] (1): 1
