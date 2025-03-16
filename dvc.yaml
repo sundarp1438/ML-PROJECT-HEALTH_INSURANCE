@@ -3,7 +3,7 @@ stages:
   data_load:
     cmd: python data_load.py --config=params.yaml
     deps:
-    - src/stages/data_load.py
+    - data_load.py
     params:
     - base
     - data_load
@@ -14,7 +14,7 @@ stages:
     cmd: python featurize.py --config=params.yaml
     deps:
     - data/raw/insurance_data.csv
-    - src/stages/featurize.py
+    - featurize.py
     params:
     - base
     - featurize
@@ -25,7 +25,7 @@ stages:
     cmd: python data_split.py --config=params.yaml
     deps:
     - data/processed/featured_insurance_data.csv
-    - src/stages/data_split.py
+    - data_split.py
     params:
     - base
     - data_split
@@ -37,7 +37,7 @@ stages:
     cmd: python train.py --config=params.yaml
     deps:
     - data/processed/train_insurance.csv
-    - src/stages/train.py
+    - train.py
     params:
     - base
     - train
@@ -49,7 +49,7 @@ stages:
     deps:
     - data/processed/test_insurance.csv
     - models/model.joblib
-    - src/stages/evaluate.py
+    - evaluate.py
     params:
     - base
     - evaluate
@@ -61,7 +61,7 @@ stages:
     deps:
     - data/processed/train_insurance.csv
     - data/processed/test_insurance.csv
-    - src/stages/data_drift.py
+    - data_drift.py
     params:
     - base
     - evaluate.drift_report_path
