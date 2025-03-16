@@ -8,10 +8,10 @@ You've downloaded C:\Users\user\.cookiecutters\cookiecutter-data-science before.
 2. project_name (project_name): health insurance
 3. repo_name (health_insurance): health_insurance
 4. module_name (health_insurance): module_insurance
-author_name (Your name (or your organization/company/team)): sundar
-description (A short description of the project.): Calculate the Health Insurance Premium
-python_version_number (3.10): 3.12
-Select dataset_storage
+5. author_name (Your name (or your organization/company/team)): sundar
+6. description (A short description of the project.): Calculate the Health Insurance Premium
+7. python_version_number (3.10): 3.12
+8. Select dataset_storage
     1 - none
     2 - azure
     3 - s3
