@@ -4,7 +4,7 @@
 !pip install cookiecutter-data-science or ccds
 ## Define the Project Architecture
 1. Run ccds (cookiecutter-data-science)
-You've downloaded C:\Users\user\.cookiecutters\cookiecutter-data-science before. Is it okay to delete and re-download it? [y/n] (y):y
+    You've downloaded C:\Users\user\.cookiecutters\cookiecutter-data-science before. Is it okay to delete and re-download it? [y/n] (y):y
 2. project_name (project_name): health insurance
 3. repo_name (health_insurance): health_insurance
 4. module_name (health_insurance): module_insurance
@@ -63,5 +63,5 @@ You've downloaded C:\Users\user\.cookiecutters\cookiecutter-data-science before.
  3. Install the Required Libraries using requirements.txt:
 
           pip install -r requirements.txt
- 4. 
+  
     
