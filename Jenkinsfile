@@ -10,6 +10,12 @@ pipeline {
                 checkout scm
             }
         }
+        stage('Python Installation') {
+            steps {
+                sh 'apt install python3'
+                sh 'apt install python3-pip'
+            }
+        }
         stage('Setup Environment') {
             steps {
                 sh 'python -m venv venv'
