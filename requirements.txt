@@ -1,29 +1,29 @@
-dvc==3.0.0
-dvc-gdrive==3.0.1
-fastapi==0.111.1
-imbalanced-learn==0.12.3
-joblib==1.4.2
-mlflow==2.14.3
-mkdocs==1.6.0
-mkdocs-material==9.5.31
-numpy ==1.26.4
-pandas==2.2.2
-pytest==8.3.2
-PyYAML==6.0.1
-scikit-learn==1.5.1
-setuptools==70.3.0
-uvicorn==0.30.1
-tenacity==8.4.0
-jsonpatch==2.0
-requests-toolbelt==2.0.0
-zstandard==0.24.0
-pydantic-settings== 2.0.0
-attrs == 22.2.0
-seaborn==0.13.1
-mlflow==2.14.2
-evidently==0.6.6
-kaggle==1.7.4.1
-openai== 1.66.3
-langchain-core==0.3.45
+dvc
+dvc-gdrive
+fastapi
+imbalanced-learn
+joblib
+mlflow
+mkdocs
+mkdocs-material
+numpy
+pandas
+pytest
+PyYAML
+scikit-learn
+setuptools
+uvicorn
+tenacity
+jsonpatch
+requests-toolbelt
+zstandard
+pydantic-settings
+attrs
+seaborn
+mlflow
+evidently
+kaggle
+openai
+langchain-core
 -e .
 # evidently @ git+https://github.com/evidentlyai/evidently.git
