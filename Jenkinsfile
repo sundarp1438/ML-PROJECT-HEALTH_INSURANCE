@@ -14,11 +14,12 @@ pipeline {
             steps {
                 sh 'sudo yum install python3 -y'
                 sh 'sudo yum install python3-pip -y'
-                sh 'sudo yum install python3-venv -y'
+                sh 'sudo yum install python3-devel -y'
             }
         }
         stage('Setup Environment') {
             steps {
+                sh 'python3 -m ensurepip'
                 sh 'python3 -m venv venv'
                 sh 'bash -c "source venv/bin/activate && pip install --upgrade pip"'
                 sh 'bash -c "source venv/bin/activate && pip install -r requirements.txt"' 
