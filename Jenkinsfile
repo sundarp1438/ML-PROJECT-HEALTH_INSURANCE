@@ -12,14 +12,16 @@ pipeline {
         }
         stage('Python Installation') {
             steps {
-                sh 'apt install python3'
-                sh 'apt install python3-pip'
+                sh 'sudo apt install python3 -y'
+                sh 'sudo apt install python3-pip -y'
+                sh 'sudo apt install python3-venv -y'
             }
         }
         stage('Setup Environment') {
             steps {
                 sh 'python3 -m venv venv'
-                sh '. venv/bin/activate && pip install -r requirements.txt'
+                sh 'source venv/bin/activate && pip install --upgrade pip'
+                sh 'source venv/bin/activate && pip install -r requirements.txt'
             }
         }
         stage('Initialize DVC') {
