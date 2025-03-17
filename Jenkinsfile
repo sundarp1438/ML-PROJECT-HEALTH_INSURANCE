@@ -12,9 +12,9 @@ pipeline {
         }
         stage('Python Installation') {
             steps {
-                sh 'sudo apt install python3 -y'
-                sh 'sudo apt install python3-pip -y'
-                sh 'sudo apt install python3-venv -y'
+                sh 'sudo yum install python3 -y'
+                sh 'sudo yum install python3-pip -y'
+                sh 'sudo yum install python3-venv -y'
             }
         }
         stage('Setup Environment') {
