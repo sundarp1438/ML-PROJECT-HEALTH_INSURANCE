@@ -70,7 +70,7 @@ pipeline {
         }
         stage('Push to Docker Hub') {
             steps {
-                withDockerRegistry([credentialsId: 'docker-hub-credentials']) {
+                withDockerRegistry([credentialsId: 'DockerHubPass']) {
                     sh 'docker tag $DOCKER_IMAGE sundarp1438/$DOCKER_IMAGE:latest'
                     sh 'docker push sundarp1438/$DOCKER_IMAGE:latest'
                 }
