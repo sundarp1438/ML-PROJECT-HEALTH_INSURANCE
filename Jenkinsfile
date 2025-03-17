@@ -20,8 +20,8 @@ pipeline {
         stage('Setup Environment') {
             steps {
                 sh 'python3 -m venv venv'
-                sh 'source venv/bin/activate && pip install --upgrade pip'
-                sh 'source venv/bin/activate && pip install -r requirements.txt'
+                sh '. venv/bin/activate && pip install --upgrade pip'
+                sh '. venv/bin/activate && pip install -r requirements.txt'
             }
         }
         stage('Initialize DVC') {
