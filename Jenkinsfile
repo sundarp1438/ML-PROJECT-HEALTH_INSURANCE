@@ -40,27 +40,27 @@ pipeline {
         }
         stage('Track Data Loading in MLflow') {
             steps {
-                sh '. venv/bin/activate && python src/stages/data_load.py --config=params.yaml'
+                sh '. venv/bin/activate && python data_load.py --config=params.yaml'
             }
         }
         stage('Track Featurization in MLflow') {
             steps {
-                sh '. venv/bin/activate && python src/stages/featurize.py --config=params.yaml'
+                sh '. venv/bin/activate && python featurize.py --config=params.yaml'
             }
         }
         stage('Track Data Splitting in MLflow') {
             steps {
-                sh '. venv/bin/activate && python src/stages/data_split.py --config=params.yaml'
+                sh '. venv/bin/activate && python data_split.py --config=params.yaml'
             }
         }
         stage('Track Model Training in MLflow') {
             steps {
-                sh '. venv/bin/activate && python src/stages/train.py --config=params.yaml'
+                sh '. venv/bin/activate && python train.py --config=params.yaml'
             }
         }
         stage('Track Model Evaluation in MLflow') {
             steps {
-                sh '. venv/bin/activate && python src/stages/mlflow_evaluate.py --config=params.yaml'
+                sh '. venv/bin/activate && python mlflow_evaluate.py --config=params.yaml'
             }
         }
         stage('Build Docker Image') {
@@ -71,8 +71,8 @@ pipeline {
         stage('Push to Docker Hub') {
             steps {
                 withDockerRegistry([credentialsId: 'docker-hub-credentials']) {
-                    sh 'docker tag $DOCKER_IMAGE yourdockerhubusername/$DOCKER_IMAGE:latest'
-                    sh 'docker push yourdockerhubusername/$DOCKER_IMAGE:latest'
+                    sh 'docker tag $DOCKER_IMAGE sundarp1438/$DOCKER_IMAGE:latest'
+                    sh 'docker push sundarp1438/$DOCKER_IMAGE:latest'
                 }
             }
         }
