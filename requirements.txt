@@ -9,7 +9,7 @@ mkdocs-material==9.0.0
 numpy==1.24.0
 pandas==1.5.3
 pytest==7.2.2
-PyYAML==6.0
+PyYAML >= 5.1
 scikit-learn==1.2.0
 setuptools==67.0.0
 uvicorn==0.20.0
