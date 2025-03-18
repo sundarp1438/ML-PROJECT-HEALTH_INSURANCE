@@ -22,7 +22,7 @@ pipeline {
                 sh 'python3 -m ensurepip'
                 sh 'python3 -m venv venv'
                 sh 'bash -c "source venv/bin/activate && pip install --upgrade pip"'
-                sh 'bash -c "source venv/bin/activate && pip install --no-deps -r requirements.txt"' 
+                sh 'bash -c "source venv/bin/activate && pip install --upgrade --no-cache-dir -r requirements.txt"' 
                 
             }
         }
