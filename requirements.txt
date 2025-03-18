@@ -1,4 +1,4 @@
-dvc==3.51.2
+dvc==3.0.0
 dvc-gdrive==3.0.1
 fastapi==0.95.0
 imbalanced-learn==0.10.0
@@ -22,5 +22,6 @@ seaborn==0.12.2
 evidently==0.3.0
 kaggle==1.5.13
 openai==1.66.2
+attrs >= 19.2.0
 langchain-core==0.0.5
 -e .
