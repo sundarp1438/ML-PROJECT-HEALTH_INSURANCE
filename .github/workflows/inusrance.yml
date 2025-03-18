@@ -1,0 +1,64 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Install Dependencies
+        run: |
+          sudo yum install -y python3 python3-pip python3-devel dvc git
+          python3 -m ensurepip
+          python3 -m venv venv
+          source venv/bin/activate && pip install --upgrade pip
+          source venv/bin/activate && pip install --upgrade --no-cache-dir --force-reinstall -r requirements.txt
+
+      - name: Initialize DVC
+        run: |
+          source venv/bin/activate && dvc init
+          source venv/bin/activate && dvc add data
+          source venv/bin/activate && git add .dvc data.dvc
+          source venv/bin/activate && git commit -m "Initialize DVC and track data"
+
+      - name: Run DVC Pipeline
+        run: source venv/bin/activate && dvc repro
+
+      - name: Track Data Loading in MLflow
+        run: source venv/bin/activate && python data_load.py --config=params.yaml
+
+      - name: Track Featurization in MLflow
+        run: source venv/bin/activate && python featurize.py --config=params.yaml
+
+      - name: Track Data Splitting in MLflow
+        run: source venv/bin/activate && python data_split.py --config=params.yaml
+
+      - name: Track Model Training in MLflow
+        run: source venv/bin/activate && python train.py --config=params.yaml
+
+      - name: Track Model Evaluation in MLflow
+        run: source venv/bin/activate && python mlflow_evaluate.py --config=params.yaml
+
+      - name: Build Docker Image
+        run: docker build -t insurance-api .
+
+      - name: Login to Docker Hub
+        run: echo "${{ secrets.DOCKER_HUB_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin
+
+      - name: Push Docker Image to Docker Hub
+        run: |
+          docker tag insurance-api sundarp1985/insurance-api:latest
+          docker push sundarp1985/insurance-api:latest
+
+      - name: Deploy to Kubernetes
+        run: kubectl apply -f k8s/deployment.yaml
